@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha() {
+
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function sorteia(maxNum) {
+
+		return Math.round(Math.random() * maxNum);
+
+	}
+
+	var maxNum = parseInt(prompt("Informe o número máximo do jogo de adivinhação."));
+
+	var chute = parseInt(prompt("Chute um número."));
+
+	var numeroSorteado = sorteia(maxNum);
+
+	if(chute == numeroSorteado) {
+
+		mostra("Você acertou!")
+
+	} else {
+
+		mostra("Você errou! O número era " + numeroSorteado);
+	}
+
+
+
+
+</script>
